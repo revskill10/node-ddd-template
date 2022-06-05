@@ -1,0 +1,47 @@
+{
+  "name": "articles-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.6.2",
+    "npm": ">=7.20.3"
+  },
+  "scripts": {
+    "test": "jest --detectOpenHandles --collectCoverage",
+    "build": "rm -rf dist && tsc && npx mkdirp ./dist/docs && cp -r ./docs ./dist",
+    "migration:create": "ts-node -r ./src/module-alias.ts ./node_modules/typeorm/cli.js --config src/data-sources/postgres/ormconfig-cli.ts migration:create",
+    "migration:generate": "ts-node -r ./src/module-alias.ts -r dotenv/config ./node_modules/typeorm/cli.js migration:generate --dataSource src/data-sources/postgres/postgres-data-source.ts",
+    "migration:run": "ts-node -r ./src/module-alias.ts ./node_modules/typeorm/cli.js  migration:run --dataSource src/data-sources/postgres/postgres-data-source.ts",
+    "migration:permission": "ts-node -r ./src/module-alias.ts ./src/data-sources/postgres/grant-appuser-permission.ts",
+    "migration:revert": "ts-node -r ./src/module-alias.ts ./node_modules/typeorm/cli.js --config src/data-sources/postgres/ormconfig-cli.ts migration:revert"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "module-alias": "^2.2.2",
+    "pg": "^8.7.3",
+    "pino": "^8.0.0",
+    "pino-http": "^7.1.0",
+    "reflect-metadata": "^0.1.13",
+    "suretype": "^3.0.5",
+    "typeorm": "^0.3.6",
+    "types-ddd": "^2.12.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^28.1.0",
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^17.0.39",
+    "@types/pg": "^8.6.5",
+    "@types/supertest": "^2.0.12",
+    "jest": "^28.1.0",
+    "supertest": "^6.2.3",
+    "ts-jest": "^28.0.4",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
+  }
+}
