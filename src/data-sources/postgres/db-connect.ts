@@ -3,9 +3,9 @@ import { postgresDataSource } from './postgres-data-source';
 import { PostgresDriver } from 'typeorm/driver/postgres/PostgresDriver';
 import { Pool } from 'pg';
 
-import { sleep } from 'src/utils/sleep';
-import { logger } from 'src/utils/logger';
-import { IS_TEST } from 'src/data-sources/config';
+import { sleep } from 'src/packages/utils/sleep';
+import { logger } from 'src/packages/utils/logger';
+import { IS_TEST } from 'src/packages/config/config';
 
 // Handles unstable/intermitten connection lost to DB
 function connectionGuard(connection: DataSource) {

@@ -1,4 +1,4 @@
-import { IS_LOCAL, IS_TEST } from 'src/data-sources/config';
+import { IS_LOCAL, IS_TEST } from 'src/packages/config/config';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { Request, Response, NextFunction } from 'express';

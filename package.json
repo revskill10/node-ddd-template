@@ -39,6 +39,7 @@
     "@types/pg": "^8.6.5",
     "@types/supertest": "^2.0.12",
     "jest": "^28.1.0",
+    "jest-cucumber": "^3.0.1",
     "supertest": "^6.2.3",
     "ts-jest": "^28.0.4",
     "ts-node": "^10.8.1",

@@ -18,7 +18,7 @@ import {
     PGROPORT,
     PGROUSER,
     PGROPASSWORD,
-} from 'src/data-sources/config';
+} from 'src/packages/config/config';
 
 export const OrmConfig = {
     // synchronize: !IS_PRODUCTION, // npm run migration:generate -- <MigrationName>
