@@ -2,5 +2,9 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  moduleDirectories: ['node_modules', '<rootDir>']
+  moduleDirectories: ['node_modules', '<rootDir>'],
+  testMatch: [
+    "**/*.steps.js",
+    "**/*.spec.ts"
+  ],
 };
