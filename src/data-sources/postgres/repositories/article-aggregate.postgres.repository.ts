@@ -3,7 +3,7 @@ import { IAggregateRepository } from 'src/packages/article/repositories/aggregat
 import ArticleAggregate from 'src/packages/article/domain/aggregates/article.aggregate';
 import { Article, Article as ArticleModel } from '../entities/article';
 import { ArticleRepository } from './article.repository';
-import { ArticleDomainMapper, ArticleMapper } from '../../../packages/article/data-mappers/aggregates/article-postgres.mapper';
+import { ArticleDomainMapper, ArticleMapper } from '../../data-mappers/aggregates/article-postgres.mapper';
 import { Repository } from 'typeorm';
 import { ArticleEvent } from '../entities/article_event';
 import { ArticleEventRepository } from './article-event.repository';

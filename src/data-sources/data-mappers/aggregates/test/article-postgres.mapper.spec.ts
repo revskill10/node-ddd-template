@@ -1,6 +1,6 @@
 import { DataSource } from 'typeorm';
-import { postgresDataSource } from '../../../../../data-sources/postgres/postgres-data-source';
-import { ArticleRepository } from '../../../../../data-sources/postgres/repositories/article.repository';
+import { postgresDataSource } from '../../../postgres/postgres-data-source';
+import { ArticleRepository } from '../../../postgres/repositories/article.repository';
 import ArticleAggregate from 'src/packages/article/domain/aggregates/article.aggregate';
 import ArticleTitleValueObject from 'src/packages/article/domain/value-objects/article-title.value-object';
 import { DomainEvents, DomainId } from 'types-ddd';
